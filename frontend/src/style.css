@@ -1,0 +1,58 @@
+html {
+    background: #EBF3FA;
+}
+body {
+    font-family: "Microsoft YaHei";
+}
+.imageWrapper {
+    margin: 0;
+    padding: 10px;
+    width: 640px;
+    background: white;
+}
+
+.headimg {
+    width: 100%;
+    border-radius: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    margin-bottom: -50px;
+}
+
+.grid-container {
+    /*网格容器*/
+    width: 100%;
+}
+
+.row::after,
+.row::before {
+    /*行*/
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+}
+
+.col {
+    /*列*/
+    float: left;
+    min-width: 1px;
+}
+
+.link{
+    color:#1DA1F2
+}
+
+.contentimg {
+ border:2px solid #ddd;
+}
+
+img.emoji {
+height: 1.25em;
+width: 1.25em;
+margin: 0 .05em 0 .1em;
+vertical-align: -0.2em;
+}

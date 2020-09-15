@@ -5,74 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#E7EFF8">
-    <title>网页烤推机</title>
+    <title>usada网页烤推机:DEV</title>
     <script src="http://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <script src="src/api.js"></script> 
+    <link rel="stylesheet" type="text/css" href="src/style.css">
 </head>
-<style>
-    html {
-        background: #EBF3FA;
-    }
-    
-    .imageWrapper {
-        margin: 0;
-        padding: 20px;
-        width: 640px;
-        background: white;
-    }
-    
-    .headimg {
-        width: 100%;
-        border-radius: 100%;
-    }
-    
-    .wrapper {
-        min-height: 100%;
-        margin-bottom: -50px;
-    }
-    
-    .grid-container {
-        /*网格容器*/
-        width: 100%;
-    }
-    
-    .row::after,
-    .row::before {
-        /*行*/
-        content: "";
-        display: block;
-        clear: both;
-        height: 0;
-        overflow: hidden;
-    }
-    
-    .col {
-        /*列*/
-        float: left;
-        min-width: 1px;
-    }
-</style>
 
-<body onload="init()">
+<body>
     <div class="grid-container">
         <div class="row">
             <p>预览图</p>
             <div id="imageWrapper" class="imageWrapper">
                 <div class="grid-container">
                     <div class="row">
-                        <div class="col" style="width:15% !important">
+                        <div class="col" style="width:7% !important">
                             <!-- 头像 -->
-                            <img class="headimg" id="headimg" src="https://pbs.twimg.com/profile_images/1284818647618224128/hyPa6ARE_200x200.jpg">
+                            <img class="headimg" id="headimg" src="src/icon/peko.jpg">
                         </div>
-                        <div class="col" style="width:85% !important">
+                        <div class="col" style="width:60% !important">
                             <!-- 昵称和ID -->
-                            <span style="margin-left:10px;font-size:27px;" id="nickname">兎田ぺこら ホロライブ3期生</span><br>
-                            <span style="margin-left:10px;font-size:20px;font-weight:lighter;;color:#657786" id="twitterid">@usadapekora</span>
+                            <span style="margin-left:10px;font-size:15px;font-weight:bold" id="nickname">兎田ぺこら ホロライブ3期生</span><br>
+                            <span style="margin-left:10px;font-size:13px;font-weight:lighter;color:#657786" id="twitterid">@usadapekora</span>
                         </div>
                     </div>
                     <div class="row">
                         <!-- 原文 -->
-                        <span style="font-size:27px;font-weight:normal;word-break: break-word;" id="orgintext">
-                            この後23時からは<br><br>
+                        <span style="font-size:24px;font-weight:normal;word-break: break-word;font-family:"Microsoft YaHei"" id="orgintext">
+                            测试文字からは条<br><br>
 
                             幼苗マインクラフト⛏<br><br>
 
@@ -85,17 +45,17 @@
                             ▽待機所▽<br>
                             https://youtu.be/W1JLbsNVmM4</span>
                     </div>
-                    <div class="row" style="margin-top:20px;">
+                    <div class="row" style="margin-top:3px;">
                         <!-- 翻译者 -->
                         <img class="translaterimg" style="max-width:100%;height:37px;" id="translaterimg" src="test.png">
                     </div>
-                    <div class="row" style="margin-top:20px;">
+                    <div class="row" style="margin-top:0px;">
                         <!-- 译文 -->
                         <span style="font-size:27px;font-weight:normal;word-break: break-word;" id="translatedtext">这里是翻译文本</span>
                     </div>
-                    <div class="row" style="margin-top:20px;">
+                    <div class="row" style="margin-top:20px;" id="imgrow">
                         <!-- 文章图片 -->
-                        <img class="contentimg" style="width: 100%;border-radius: 20px;" id="contentimg" src="https://pbs.twimg.com/media/EhzDqAcVkAA9PLA?format=jpg&name=small">
+                        <img class="contentimg" style="width: 100%;border-radius: 15px;" id="contentimg" src="https://pbs.twimg.com/media/EhzDqAcVkAA9PLA?format=jpg&name=small">
                     </div>
                     <div class="row" style="margin-top:10px;">
                         <!-- 时间信息 -->
@@ -111,19 +71,4 @@
 
 </html>
 <script>
-    function init() {
-        //imgGet("https://pbs.twimg.com/profile_images/1284818647618224128/hyPa6ARE_200x200.jpg", "headimg");
-        imgOutput();
-    }
-
-
-    function imgOutput() {
-        html2canvas(document.getElementById("imageWrapper"), {
-            useCORS: true,
-            logging: true
-        }).then(canvas => {
-            let dataURL = canvas.toDataURL("image/png");
-            document.body.appendChild(canvas);
-        });
-    }
 </script>
