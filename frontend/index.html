@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#E7EFF8">
-    <title>网页烤推机</title>
+    <title>usada网页烤推机:DEV</title>
     <script src="http://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="src/api.js"></script> 
+    <link rel="stylesheet" type="text/css" href="src/style.css">
 </head>
 
-<body onload="init()">
+<body>
     <div class="grid-container">
         <div class="row">
             <p>预览图</p>
@@ -70,19 +71,4 @@
 
 </html>
 <script>
-	data64 = ''
-    function imgOutput() {
-        html2canvas(document.getElementById("imageWrapper"), {
-            useCORS: true,
-            logging: true
-        }).then(canvas => {
-            //let dataURL = canvas.toDataURL("image/png");
-            //document.body.appendChild(canvas);
-			data64 = canvas.toDataURL("image/png");
-        });
-		
-    }
-    function reta(){
-        return data64;
-    }
 </script>

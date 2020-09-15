@@ -42,7 +42,13 @@ body {
     min-width: 1px;
 }
 
-.link{color:#1DA1F2}
+.link{
+    color:#1DA1F2
+}
+
+.contentimg {
+ border:2px solid #ddd;
+}
 
 img.emoji {
 height: 1.25em;
