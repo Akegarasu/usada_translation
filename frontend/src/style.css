@@ -1,9 +1,11 @@
 html {
     background: #EBF3FA;
 }
+
 body {
     font-family: "Microsoft YaHei";
 }
+
 .imageWrapper {
     margin: 0;
     padding: 10px;
@@ -40,19 +42,32 @@ body {
     /*列*/
     float: left;
     min-width: 1px;
+    overflow: hidden;
 }
 
-.link{
-    color:#1DA1F2
+.link {
+    color: #1DA1F2
 }
 
 .contentimg {
- border:2px solid #ddd;
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    display: block;
+}
+
+#imgrow {
+    margin-top: 20px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 2px solid #ddd;
 }
 
 img.emoji {
-height: 1.25em;
-width: 1.25em;
-margin: 0 .05em 0 .1em;
-vertical-align: -0.2em;
+    height: 1.25em;
+    width: 1.25em;
+    margin: 0 .05em 0 .1em;
+    vertical-align: -0.2em;
 }

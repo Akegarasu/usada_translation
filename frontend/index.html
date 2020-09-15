@@ -8,11 +8,11 @@
     <title>usada网页烤推机:DEV</title>
     <script src="http://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
-    <script src="src/api.js"></script> 
+    <script src="src/api.js"></script>
     <link rel="stylesheet" type="text/css" href="src/style.css">
 </head>
 
-<body>
+<body onload="imgShow(imgs)">
     <div class="grid-container">
         <div class="row">
             <p>预览图</p>
@@ -31,7 +31,7 @@
                     </div>
                     <div class="row">
                         <!-- 原文 -->
-                        <span style="font-size:24px;font-weight:normal;word-break: break-word;font-family:"Microsoft YaHei"" id="orgintext">
+                        <span style="font-size:24px;font-weight:normal;word-break: break-word;font-family:" Microsoft YaHei "" id="orgintext">
                             测试文字からは条<br><br>
 
                             幼苗マインクラフト⛏<br><br>
@@ -53,9 +53,9 @@
                         <!-- 译文 -->
                         <span style="font-size:27px;font-weight:normal;word-break: break-word;" id="translatedtext">这里是翻译文本</span>
                     </div>
-                    <div class="row" style="margin-top:20px;" id="imgrow">
+                    <div class="row" id="imgrow">
                         <!-- 文章图片 -->
-                        <img class="contentimg" style="width: 100%;border-radius: 15px;" id="contentimg" src="https://pbs.twimg.com/media/EhzDqAcVkAA9PLA?format=jpg&name=small">
+                        <!-- <img class="contentimg" style="width: 100%;border-radius: 15px;" id="contentimg" src="https://pbs.twimg.com/media/EhzDqAcVkAA9PLA?format=jpg&name=small"> -->
                     </div>
                     <div class="row" style="margin-top:10px;">
                         <!-- 时间信息 -->
