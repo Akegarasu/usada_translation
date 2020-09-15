@@ -62,7 +62,7 @@ function imgShow(imgs) { //图片生成
         var img1 = document.createElement("img");
         var col1 = document.createElement("div");
         col1.classList.add("col");
-        col1.style.width = "318px";
+        col1.style.width = "316px";
         col1.style.paddingRight = "2px";
         col1.style.overflow = "hidden";
         img1.classList.add("contentimg");
@@ -70,7 +70,7 @@ function imgShow(imgs) { //图片生成
         var img2 = document.createElement("img");
         var col2 = document.createElement("div");
         col2.classList.add("col");
-        col2.style.width = "318px";
+        col2.style.width = "316px";
         col2.style.paddingLeft = "2px";
         col2.style.overflow = "hidden";
         img2.classList.add("contentimg");
@@ -143,10 +143,10 @@ function imgShow(imgs) { //图片生成
         col12.classList.add("col");
         col21.classList.add("col");
         col22.classList.add("col");
-        col11.style.width = "318px";
-        col12.style.width = "318px"
-        col21.style.width = "318px"
-        col22.style.width = "318px"
+        col11.style.width = "316px";
+        col12.style.width = "316px"
+        col21.style.width = "316px"
+        col22.style.width = "316px"
         col11.style.height = "200px";
         col12.style.height = "200px"
         col21.style.height = "200px"
