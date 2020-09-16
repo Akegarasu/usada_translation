@@ -12,6 +12,7 @@ function imgOutput() {
         //let dataURL = canvas.toDataURL("image/png");
         //document.body.appendChild(canvas);
         data64 = canvas.toDataURL("image/png");
+        //document.body.appendChild(canvas);
     });
 
 }
@@ -47,14 +48,14 @@ function reCmd(ele, src) {
     src = Formatter(src)
     eleInnerHtml(ele, src)
 }
-var imgs = ["https://www.w3school.com.cn/i/eg_tulip.jpg", "https://www.w3school.com.cn/i/eg_tulip.jpg", "https://www.w3school.com.cn/i/eg_tulip.jpg"];
+var imgs = ["https://www.w3school.com.cn/i/eg_tulip.jpg", "https://www.w3school.com.cn/i/eg_tulip.jpg", "https://www.w3school.com.cn/i/eg_tulip.jpg", "https://www.w3school.com.cn/i/eg_tulip.jpg"];
 //测试图片
 
 function imgShow(imgs) { //图片生成
     var imgrow = document.getElementById("imgrow");
     if (imgs.length == 1) {
         var img1 = document.createElement("img");
-        img1.classList.add("contentimg");
+        img1.classList.add("Ncontentimg");
         img1.src = imgs[0];
         img1.style.width = "100%";
         imgrow.appendChild(img1);
@@ -66,7 +67,8 @@ function imgShow(imgs) { //图片生成
         col1.style.paddingRight = "2px";
         col1.style.overflow = "hidden";
         img1.classList.add("contentimg");
-        img1.src = imgs[0];
+        img1.style.backgroundImage = "url(" + imgs[0] + ")";
+
         var img2 = document.createElement("img");
         var col2 = document.createElement("div");
         col2.classList.add("col");
@@ -74,7 +76,7 @@ function imgShow(imgs) { //图片生成
         col2.style.paddingLeft = "2px";
         col2.style.overflow = "hidden";
         img2.classList.add("contentimg");
-        img2.src = imgs[1];
+        img2.style.backgroundImage = "url(" + imgs[1] + ")";
         col1.appendChild(img1);
         col2.appendChild(img2);
         imgrow.appendChild(col1);
@@ -86,7 +88,7 @@ function imgShow(imgs) { //图片生成
         col1.style.width = "50%";
         col1.style.overflow = "hidden";
         img1.classList.add("contentimg");
-        img1.src = imgs[0];
+        img1.style.backgroundImage = "url(" + imgs[0] + ")";
         var col2 = document.createElement("div");
         col2.classList.add("col");
         col2.style.width = "50%";
@@ -97,14 +99,14 @@ function imgShow(imgs) { //图片生成
         img21.style.marginLeft = "4px";
         img21.classList.add("contentimg");
         img21.style.maxHeight = "200px"
-        img21.src = imgs[1];
+        img21.style.backgroundImage = "url(" + imgs[1] + ")";
         var row22 = document.createElement("div");
         row22.classList.add("row");
         var img22 = document.createElement("img");
         img22.style.marginLeft = "4px";
         img22.classList.add("contentimg");
         img22.style.maxHeight = "200px"
-        img22.src = imgs[2];
+        img22.style.backgroundImage = "url(" + imgs[2] + ")";
         row21.style.paddingBottom = "2px";
         row22.style.paddingTop = "2px";
         row21.appendChild(img21);
@@ -119,10 +121,10 @@ function imgShow(imgs) { //图片生成
         var img12 = document.createElement("img");
         var img21 = document.createElement("img");
         var img22 = document.createElement("img");
-        img11.src = imgs[0];
-        img12.src = imgs[1];
-        img21.src = imgs[2];
-        img22.src = imgs[3];
+        img11.style.backgroundImage = "url(" + imgs[0] + ")";
+        img12.style.backgroundImage = "url(" + imgs[1] + ")";
+        img21.style.backgroundImage = "url(" + imgs[2] + ")";
+        img22.style.backgroundImage = "url(" + imgs[3] + ")";
         img11.classList.add("contentimg");
         img12.classList.add("contentimg");
         img21.classList.add("contentimg");
@@ -170,5 +172,6 @@ function imgShow(imgs) { //图片生成
         col1.appendChild(row1);
         col1.appendChild(row2);
         imgrow.appendChild(col1);
+
     }
 }

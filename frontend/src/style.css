@@ -53,13 +53,21 @@ body {
     height: 400px;
     width: 100%;
     overflow: hidden;
-    object-fit: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    display: block;
+}
+
+
+.Ncontentimg {
     display: block;
 }
 
 #imgrow {
     margin-top: 20px;
-    height: 400px;
     overflow: hidden;
     border-radius: 15px;
     border: 2px solid #ddd;
